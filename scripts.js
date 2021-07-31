@@ -24,7 +24,7 @@ function displayCalendario(){
 
 	if(valorDataInicial != '' && valorDataFinal != ''){
 		if(valorDataInicial<valorDataFinal){
-			var url = "http://localhost/calendario/dataInicial="+valorDataInicial+"&dataFinal="+valorDataFinal;
+			var url = "http://localhost/calendario?dataInicial="+valorDataInicial+"&dataFinal="+valorDataFinal;
 			var xhttp = new XMLHttpRequest();
 			xhttp.open("GET", url, true);
 			xhttp.onreadystatechange = function(){
@@ -32,6 +32,7 @@ function displayCalendario(){
 			        document.body.innerHTML = xhttp.responseText;
 			    }
 			}
+			xhttp.send();
 		}
 	}
 }

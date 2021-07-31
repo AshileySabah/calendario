@@ -12,7 +12,6 @@
 		$guardarDataFinal = $_GET['dataFinal'];
 
 		$iniciarCalendario = true;
-		echo "aqui";
 	}
 ?>
 
@@ -49,7 +48,8 @@
 		</form>
 
 		<?php if($iniciarCalendario){ ?>
-			aaaaaaaaaaaaa
+			<?php echo $guardarDataInicial ?>
+			<?php echo $guardarDataFinal ?>
 		<?php } ?>
 	</body>
 </html>
