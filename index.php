@@ -61,6 +61,15 @@
 				    $dataComeco = $dataComeco->modify('+1day');
 				}
 			?>
+			<!-- calendário -->
+			<div id="container">
+				<aside class="legendas">
+					
+				</aside>
+				<div id="calendario">
+					
+				</div>
+			</div>
 		<?php } ?>
 	</body>
 </html>
