@@ -10,7 +10,8 @@ input{
 	outline: 0;
 }
 body{
-	background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(192,192,213,1) 58%, rgba(157,161,162,1) 100%);
+	background: rgb(235,230,230);
+	background: radial-gradient(circle, rgba(235,230,230,1) 0%, rgba(158,158,164,0.9447129193474265) 78%, rgba(167,167,167,1) 91%);
 	font-family: 'Arial', sans-serif;
 }
 nav#navegacao-topo{

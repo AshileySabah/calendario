@@ -48,8 +48,7 @@
 		</form>
 
 		<?php if($iniciarCalendario){ ?>
-			<?php echo $guardarDataInicial ?>
-			<?php echo $guardarDataFinal ?>
+			<!-- range de datas do período setado -->
 			<?php
 				$dataComeco = new DateTime($guardarDataInicial);
 				$dataFim = new DateTime($guardarDataFinal);
