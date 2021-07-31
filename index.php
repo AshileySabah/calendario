@@ -50,6 +50,18 @@
 		<?php if($iniciarCalendario){ ?>
 			<?php echo $guardarDataInicial ?>
 			<?php echo $guardarDataFinal ?>
+			<?php
+				$dataComeco = new DateTime($guardarDataInicial);
+				$dataFim = new DateTime($guardarDataFinal);
+
+				$rangeData = [];
+				$indiceRangeData = 0;
+				while($dataComeco <= $dataFim){
+					$rangeData[$indiceRangeData] = $dataComeco->format('Y-m-d');
+					$indiceRangeData++;
+				    $dataComeco = $dataComeco->modify('+1day');
+				}
+			?>
 		<?php } ?>
 	</body>
 </html>
