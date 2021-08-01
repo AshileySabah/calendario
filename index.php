@@ -66,13 +66,21 @@
 			<?php
 				$diasDaSemanaArray = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
 				$contandoDias = 0;
+
+				$corUrgente = 'background: darkred';
+				$corImportante = 'background: indianred';
+				$corNaoUrgente = 'background: darkturquoise';
+				$corNaoImportante = 'background: powderblue';
 			?>
 			<!-- calendário -->
 			<div id="container">
 				<aside class="legendas">
 					<div class="texto-legenda">Lengendas</div>
 					<div class="conteudo-lengenda">
-						
+						<div><div class="cor-legenda" style="<?php echo $corUrgente ?>"></div>Urgente</div>
+						<div><div class="cor-legenda" style="<?php echo $corImportante ?>"></div>Importante</div>
+						<div><div class="cor-legenda" style="<?php echo $corNaoUrgente ?>"></div>Não urgente</div>
+						<div><div class="cor-legenda" style="<?php echo $corNaoImportante ?>"></div>Não importante</div>
 					</div>
 				</aside>
 				<div id="calendario">
@@ -117,7 +125,7 @@
 							$corDeFundo = 'background: #E6E6E6';
 						}
 					?>
-						<div class="dia-calendario" style="<?php echo $marginDia.';'.$espacamentoDoDia.';'.$corDeFundo ?>">
+						<div class="dia-calendario" style="<?php echo $marginDia.';'.$espacamentoDoDia.';' ?>">
 							<time><?php echo $dia ?></time>
 						</div>
 					<?php } ?>

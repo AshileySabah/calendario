@@ -90,3 +90,9 @@ div.dia-calendario{
 div.dia-calendario time{
 	float: right;
 }
+div.cor-legenda{
+	float: left;
+	margin-right: 5px;
+	width: 16px;
+	height: 16px;
+}
