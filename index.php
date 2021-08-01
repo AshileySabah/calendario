@@ -64,6 +64,7 @@
 			?>
 			<!-- variáveis importantes -->
 			<?php
+				$diasDaSemanaArray = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
 				$contandoDias = 0;
 			?>
 			<!-- calendário -->
@@ -71,17 +72,20 @@
 				<aside class="legendas">
 					<div class="texto-legenda">Lengendas</div>
 					<div class="conteudo-lengenda">
-						
+
 					</div>
 				</aside>
 				<div id="calendario">
-					<div class="cabecalho-calendario">Domingo</div>
-					<div class="cabecalho-calendario">Segunda</div>
-					<div class="cabecalho-calendario">Terça</div>
-					<div class="cabecalho-calendario">Quarta</div>
-					<div class="cabecalho-calendario">Quinta</div>
-					<div class="cabecalho-calendario">Sexta</div>
-					<div class="cabecalho-sabado">Sábado</div>
+					<!-- percorrer dias da semana -->
+					<?php foreach ($diasDaSemanaArray as $cadaDiaDaSemana) { ?>
+						<?php if($cadaDiaDaSemana != 'Sábado'): ?>
+							<div class="cabecalho-calendario"><?php echo $cadaDiaDaSemana ?></div>
+						<?php else: ?>
+							<div class="cabecalho-sabado"><?php echo $cadaDiaDaSemana ?></div>
+						<?php endif; ?>
+					<?php } ?>
+
+					<!-- percorrer datas do período setado -->
 					<?php foreach ($rangeData as $cadaData) {
 						$contandoDias++;
 
@@ -92,9 +96,16 @@
 						}else{
 							$marginDia = 'margin-right: 5px';
 						}
+
+						if($contandoDias == 1){
+							$diaDaSemana = date('w', strtotime($cadaData));
+						}else{
+							$diaDaSemana = '';
+						}
 					?>
 						<div class="dia-calendario" style="<?php echo $marginDia ?>">
 							<time><?php echo $dia ?></time>
+							<span><?php echo $diaDaSemana ?></span>
 						</div>
 					<?php } ?>
 				</div>
