@@ -72,7 +72,7 @@
 				<aside class="legendas">
 					<div class="texto-legenda">Lengendas</div>
 					<div class="conteudo-lengenda">
-
+						
 					</div>
 				</aside>
 				<div id="calendario">
@@ -96,20 +96,28 @@
 							
 							for($i=0; $i<count($diasDaSemanaArray); $i++){ 
 								if($diaDaSemana == $i){
-									$espacamentoDoDia = $diaDaSemana*179;
+									$espacamentoDoDia = 'margin-left: '.($diaDaSemana*179).'px';
 								}
 							}
 						}else{
-							$espacamentoDoDia = 0;
+							$espacamentoDoDia = '';
 						}
 
+						//posicionar primeiro dia
 						if(($contandoDias+$diaDaSemana)%7 == 0){
 							$marginDia = 'margin-right: 0';
 						}else{
 							$marginDia = 'margin-right: 5px';
 						}
+
+						//intercalar cores
+						if($contandoDias%2 == 0){
+							$corDeFundo = 'background: white';
+						}else{
+							$corDeFundo = 'background: #E6E6E6';
+						}
 					?>
-						<div class="dia-calendario" style="<?php echo $marginDia ?>; margin-left: <?php echo $espacamentoDoDia.'px' ?>;">
+						<div class="dia-calendario" style="<?php echo $marginDia.';'.$espacamentoDoDia.';'.$corDeFundo ?>">
 							<time><?php echo $dia ?></time>
 						</div>
 					<?php } ?>

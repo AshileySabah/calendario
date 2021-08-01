@@ -53,13 +53,18 @@ aside.legendas{
 div.texto-legenda{
 	background: gray;
 	text-align: center;
+	padding: 5px;
+	border-radius: 0 0 10px 10px;
+}
+aside.legendas{
+	background: #272829;
 }
 div.conteudo-lengenda{
 	background: white;
 	padding: 5px;
 }
 div#calendario{
-	background: #191F24;
+	background: #272829;
 	width: 1248px;
 	float: left;
 }
@@ -69,6 +74,8 @@ div.cabecalho-calendario, div.cabecalho-sabado{
 	text-align: center;
 	width: 174px;
 	margin-right: 5px;
+	padding: 4px 0;
+	border-radius: 0 0 10px 10px;
 }
 div.cabecalho-sabado{
 	margin-right: 0;
@@ -76,7 +83,7 @@ div.cabecalho-sabado{
 div.dia-calendario{
 	background: white;
 	width: 174px;
-	height: 100px;
+	height: 105px;
 	float: left;
 	margin-top: 5px;
 }
