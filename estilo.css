@@ -42,27 +42,44 @@ form#formulario-calendario input[type="date"]{
 	margin-right: 20px;
 }
 div#container{
-	background: blue;
+	width: 1428px;
 	margin: 20px auto;
-	width: 90%;
 }
 aside.legendas{
-	background: white;
-	width: 13%;
+	width: 150px;
 	float: left;
+	margin-right: 30px;
+}
+div.texto-legenda{
+	background: gray;
+	text-align: center;
+}
+div.conteudo-lengenda{
+	background: white;
+	padding: 5px;
 }
 div#calendario{
-	background: pink;
-	float: right;
-	width: 85%;
+	background: #191F24;
+	width: 1248px;
+	float: left;
 }
 div.cabecalho-calendario, div.cabecalho-sabado{
-	background: gray;
 	float: left;
-	width: 14%;
+	background: gray;
 	text-align: center;
-	margin-right: 0.28%;
+	width: 174px;
+	margin-right: 5px;
 }
 div.cabecalho-sabado{
-	margin-right: 0%;
+	margin-right: 0;
+}
+div.dia-calendario{
+	background: white;
+	width: 174px;
+	height: 100px;
+	float: left;
+	margin-top: 5px;
+}
+div.dia-calendario time{
+	float: right;
 }

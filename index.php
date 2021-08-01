@@ -46,6 +46,7 @@
 
 			<span id="mensagemTeste"></span>
 		</form>
+		
 
 		<?php if($iniciarCalendario){ ?>
 			<!-- range de datas do período setado -->
@@ -61,10 +62,17 @@
 				    $dataComeco = $dataComeco->modify('+1day');
 				}
 			?>
+			<!-- variáveis importantes -->
+			<?php
+				$contandoDias = 0;
+			?>
 			<!-- calendário -->
 			<div id="container">
 				<aside class="legendas">
-					aa
+					<div class="texto-legenda">Lengendas</div>
+					<div class="conteudo-lengenda">
+						
+					</div>
 				</aside>
 				<div id="calendario">
 					<div class="cabecalho-calendario">Domingo</div>
@@ -74,6 +82,21 @@
 					<div class="cabecalho-calendario">Quinta</div>
 					<div class="cabecalho-calendario">Sexta</div>
 					<div class="cabecalho-sabado">Sábado</div>
+					<?php foreach ($rangeData as $cadaData) {
+						$contandoDias++;
+
+						$dia = substr($cadaData, 8, 2);
+
+						if($contandoDias%7 == 0){
+							$marginDia = 'margin-right: 0';
+						}else{
+							$marginDia = 'margin-right: 5px';
+						}
+					?>
+						<div class="dia-calendario" style="<?php echo $marginDia ?>">
+							<time><?php echo $dia ?></time>
+						</div>
+					<?php } ?>
 				</div>
 				<div class="limpar-fluxo"></div>
 			</div>
