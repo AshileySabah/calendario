@@ -91,21 +91,26 @@
 
 						$dia = substr($cadaData, 8, 2);
 
-						if($contandoDias%7 == 0){
+						if($contandoDias == 1){
+							$diaDaSemana = date('w', strtotime($cadaData));
+							
+							for($i=0; $i<count($diasDaSemanaArray); $i++){ 
+								if($diaDaSemana == $i){
+									$espacamentoDoDia = $diaDaSemana*179;
+								}
+							}
+						}else{
+							$espacamentoDoDia = 0;
+						}
+
+						if(($contandoDias+$diaDaSemana)%7 == 0){
 							$marginDia = 'margin-right: 0';
 						}else{
 							$marginDia = 'margin-right: 5px';
 						}
-
-						if($contandoDias == 1){
-							$diaDaSemana = date('w', strtotime($cadaData));
-						}else{
-							$diaDaSemana = '';
-						}
 					?>
-						<div class="dia-calendario" style="<?php echo $marginDia ?>">
+						<div class="dia-calendario" style="<?php echo $marginDia ?>; margin-left: <?php echo $espacamentoDoDia.'px' ?>;">
 							<time><?php echo $dia ?></time>
-							<span><?php echo $diaDaSemana ?></span>
 						</div>
 					<?php } ?>
 				</div>
