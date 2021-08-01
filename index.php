@@ -64,11 +64,18 @@
 			<!-- calendário -->
 			<div id="container">
 				<aside class="legendas">
-					
+					aa
 				</aside>
 				<div id="calendario">
-					
+					<div class="cabecalho-calendario">Domingo</div>
+					<div class="cabecalho-calendario">Segunda</div>
+					<div class="cabecalho-calendario">Terça</div>
+					<div class="cabecalho-calendario">Quarta</div>
+					<div class="cabecalho-calendario">Quinta</div>
+					<div class="cabecalho-calendario">Sexta</div>
+					<div class="cabecalho-sabado">Sábado</div>
 				</div>
+				<div class="limpar-fluxo"></div>
 			</div>
 		<?php } ?>
 	</body>

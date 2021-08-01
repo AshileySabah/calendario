@@ -14,6 +14,9 @@ body{
 	background: radial-gradient(circle, rgba(235,230,230,1) 0%, rgba(158,158,164,0.9447129193474265) 78%, rgba(167,167,167,1) 91%);
 	font-family: 'Arial', sans-serif;
 }
+.limpar-fluxo{
+	clear: both;
+}
 nav#navegacao-topo{
 	background: #0E2E4D;
 	/*background: #07213A;*/
@@ -37,4 +40,29 @@ form#formulario-calendario input[type="date"]{
 	border-radius: 10px;
 	border: 1px solid black;
 	margin-right: 20px;
+}
+div#container{
+	background: blue;
+	margin: 20px auto;
+	width: 90%;
+}
+aside.legendas{
+	background: white;
+	width: 13%;
+	float: left;
+}
+div#calendario{
+	background: pink;
+	float: right;
+	width: 85%;
+}
+div.cabecalho-calendario, div.cabecalho-sabado{
+	background: gray;
+	float: left;
+	width: 14%;
+	text-align: center;
+	margin-right: 0.28%;
+}
+div.cabecalho-sabado{
+	margin-right: 0%;
 }
